@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllProducts } from '../services'
 import assets from '../assets'
-import "./GetProduct.css"
+import "./getProduct.css"
 import { Link, useParams } from 'react-router-dom'
 export const GetProducts = () => {
     const [products, setProducts] = useState([])
