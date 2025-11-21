@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { getProductById } from "../services"
-import assets from "../assets"
 export const Product = () => {
     const { id } = useParams()
     const [product, setProduct] = useState([])
