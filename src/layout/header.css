@@ -1,0 +1,139 @@
+.header .top-header {
+    padding: 10px 0;
+    background: var(--uzum-Athens-Gray, #F2F4F7);
+    margin-bottom: 17px;
+}
+
+.header .top-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header .location {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.location .location-adres {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.location-adres p {
+
+    color: #1F2026;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+}
+
+.location-adres p span {
+    font-weight: 500;
+    border-bottom: 0.8px solid #1F2026;
+}
+
+.location h4 {
+    color: #1F2026;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+.buyurtma {
+    color: #8B8E99;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.header .language {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language h4 {
+    color: #595B66;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+.language .select-lang {
+    display: flex;
+    gap: 6px;
+}
+
+/* main header */
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.katalog-btn {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px;
+    padding: 8px 18px !important;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    /* Safari uchun */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.main-header .search-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 24px 0 32px;
+}
+
+.search-header input {
+    color: #757575;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(54, 54, 64, 0.20);
+    background: #fff;
+    width: 528px;
+    padding: 10px 16px 12px 16px;
+}
+
+.search-header input::placeholder {
+    color: #757575;
+    font-size: 14px;
+}
+
+.main-header .header-functs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-functs div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.modal,
+.like,
+.savat{
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    transition: all .2s linear;
+    border-radius: 8px;
+}
+.modal:hover,
+.like:hover,
+.savat:hover
+{
+    background: #DEE0E5;
+    cursor: pointer;
+}

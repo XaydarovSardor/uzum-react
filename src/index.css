@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Core style */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+textarea:focus,
+select:focus {
+    outline: none !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    box-shadow: none !important;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+
+body {
+    font-weight: 400;
+    font-family: "Inter";
+}
+
+a {
+    font-family: "Roboto";
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
