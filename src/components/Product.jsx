@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { getProductById } from "../services"
+import { addToCart, getProductById } from "../services"
 export const Product = () => {
     const { id } = useParams()
     const [product, setProduct] = useState([])
@@ -49,7 +49,7 @@ export const Product = () => {
                     <button className="w-full bg-gray-200 py-3 rounded-lg text-gray-600 mb-2">
                         1 klikda xarid qilish
                     </button>
-                    <button className="main-btn w-full bg-[#7000ff] text-white py-3 rounded-lg text-lg font-semibold">
+                    <button onClick={(e)=>addToCart(product,e)} className="main-btn w-full bg-[#7000ff] text-white py-3 rounded-lg text-lg font-semibold">
                         Savatga qo‘shish
                     </button>
 
