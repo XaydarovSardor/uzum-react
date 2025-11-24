@@ -10,9 +10,9 @@ function App() {
     <div className="wrapper">
       <Header />
       <Routes>
-        <Route path='/' element={<GetProducts/>}/>
-        <Route path='/products/:id' element={<Product/>}/>
-        <Route  path='/savat' element={<Cart/>}/>
+        <Route path='/' element={<GetProducts />} />
+        <Route path='/products/:id' element={<Product />} />
+        <Route path='/savat' element={<Cart />} />
       </Routes>
       <Footer />
     </div>
