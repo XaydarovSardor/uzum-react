@@ -29,16 +29,23 @@ export const addToCart = async (product, e) => {
 
         const basketItems = JSON.parse(localStorage.getItem("cartItems")) || [];
         const exist = basketItems.find(item => item.id === product.id);
+
         if (exist) {
             exist.quantity += 1;
         } else {
             basketItems.push({ ...product, quantity: 1 });
         }
+
         localStorage.setItem("cartItems", JSON.stringify(basketItems));
+
+        // 🔔 Savat o'zgargani haqida event jo'natamiz
+        window.dispatchEvent(new Event("cartUpdated"));
+
     } catch (error) {
         console.log(error);
     }
-}
+};
+
 export const getCartItems = () => {
     try {
         return JSON.parse(localStorage.getItem("cartItems")) || []
@@ -56,13 +63,13 @@ export const removeFromCart = (basket, setBasket, productId, e) => {
 
 export const updateQuantity = (type, id) => {
     const cart = JSON.parse(localStorage.getItem("cartItems")) || []
-    const product = cart.find(item=> item.id===id)
-    if(!product) return
-    if(type==="increase"){
-        product.quantity+=1
-    }else if(type==="decrease"){
-        if(product.quantity>1){
-            product.quantity-=1;
+    const product = cart.find(item => item.id === id)
+    if (!product) return
+    if (type === "increase") {
+        product.quantity += 1
+    } else if (type === "decrease") {
+        if (product.quantity > 1) {
+            product.quantity -= 1;
         }
     }
     localStorage.setItem("cartItems", JSON.stringify(cart))

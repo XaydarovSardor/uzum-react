@@ -60,7 +60,11 @@ a {
 }
 
 .wrapper {
-    overflow: hidden;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 .container {
