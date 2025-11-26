@@ -1,8 +1,8 @@
-import Header from './layout/header';
+import Header from './layout/Header';
 import { Footer } from './layout/Footer';
 import { GetProducts } from './components/GetProducts';
 import { Route, Routes } from 'react-router-dom';
-import { Product } from './components/product';
+import { Product } from './components/Product';
 import { Cart } from './components/Cart';
 
 function App() {
