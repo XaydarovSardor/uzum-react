@@ -58,9 +58,7 @@ body {
 a {
     font-family: "Roboto";
 }
-img{
-    object-fit: contain;
-}
+
 .wrapper {
     display: flex;
     overflow-x: hidden;
