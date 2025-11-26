@@ -1,9 +1,9 @@
-import { Header } from './layout/Header';
 import { Footer } from './layout/Footer';
 import { GetProducts } from './components/GetProducts';
 import { Route, Routes } from 'react-router-dom';
 import { Product } from './components/Product';
 import { Cart } from './components/Cart';
+import { Header } from './layout/header';
 
 function App() {
   return (

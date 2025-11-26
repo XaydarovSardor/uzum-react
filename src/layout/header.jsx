@@ -6,19 +6,19 @@ import axios from "axios"
 import API_URL from "../services/api"
 
 export const Header = () => {
-    
-    
     const [openModal, setOpenModal] = useState(false)
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
+
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("user"))
         if (user?.username === "mor_2314" && user?.password === "83r5^_") {
             setLoggedIn(true)
         }
     }, [])
+
     const formSubmit = async (e) => {
         e.preventDefault();
 
