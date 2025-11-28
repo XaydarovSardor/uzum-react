@@ -92,7 +92,6 @@ input[type="search"] {
     display: flex;
     align-items: center;
     gap: 7px;
-    margin: 0 24px 0 32px;
 }
 
 .search-header input {
@@ -101,7 +100,7 @@ input[type="search"] {
     border-radius: 4px;
     border: 1px solid rgba(54, 54, 64, 0.20);
     background: #fff;
-    width: 450px;
+    width: 440px;
     padding: 10px 16px 12px 16px;
 }
 
@@ -118,8 +117,7 @@ input[type="search"] {
 
 .auth,
 .like,
-.savat,
-.profile
+.savat
 {
     padding: 8px 16px;
     display: flex;
@@ -128,7 +126,14 @@ input[type="search"] {
     transition: all .2s linear;
     border-radius: 8px;
 }
-
+.profile{
+    display: flex;
+    padding: 6px;
+    gap: 5px;
+    align-items: center;
+    transition: all .2s linear;
+    border-radius: 8px;
+}
 .auth:hover,
 .like:hover,
 .savat:hover {

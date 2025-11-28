@@ -1,7 +1,7 @@
 import axios from "axios";
-import { useState } from "react";
 import API_URL from "./api";
-import js from "@eslint/js";
+import { toast } from "react-toastify";
+import { Product } from "../components/Product";
 
 export const getAllProducts = async () => {
     try {
@@ -32,13 +32,14 @@ export const addToCart = async (product, e) => {
 
         if (exist) {
             exist.quantity += 1;
+            toast.success(`${product.title} savatga qo'shildi`)
         } else {
             basketItems.push({ ...product, quantity: 1 });
+            toast.success(`${product.title} savatga qo'shildi`)
         }
 
         localStorage.setItem("cartItems", JSON.stringify(basketItems));
 
-        // 🔔 Savat o'zgargani haqida event jo'natamiz
         window.dispatchEvent(new Event("cartUpdated"));
 
     } catch (error) {
@@ -75,3 +76,4 @@ export const updateQuantity = (type, id) => {
     localStorage.setItem("cartItems", JSON.stringify(cart))
     return cart
 }
+ 

@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { addToCart, getProductById } from "../services"
 export const Product = () => {
     const { id } = useParams()
     const [product, setProduct] = useState([])
+    const navigate = useNavigate()
     useEffect(() => {
         try {
             const getproduct = async () => {
@@ -17,6 +18,17 @@ export const Product = () => {
     }, [])
     return (
         <div className='container'>
+            <button onClick={() => navigate(-1)} className="px-6 mt-5 py-2 flex items-center justify-center rounded-lg bg-indigo-600 text-white font-semibold 
+                    shadow-[0_0_10px_rgba(99,102,241,0.8)] 
+                    hover:shadow-[0_0_20px_rgba(99,102,241,1)] 
+                    transition-all duration-300">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back
+            </button>
             <div className="flex my-10 gap-[100px]" key={product.id}>
                 <div className="product-info max-w-[700px] w-full">
                     <h1 className="font-semibold text-2xl mb-4 leading-[30px]">{product.title}</h1>
@@ -49,7 +61,7 @@ export const Product = () => {
                     <button className="w-full bg-gray-200 py-3 rounded-lg text-gray-600 mb-2">
                         1 klikda xarid qilish
                     </button>
-                    <button onClick={(e)=>addToCart(product,e)} className="main-btn w-full bg-[#7000ff] text-white py-3 rounded-lg text-lg font-semibold">
+                    <button onClick={(e) => addToCart(product, e)} className="main-btn w-full bg-[#7000ff] text-white py-3 rounded-lg text-lg font-semibold">
                         Savatga qo‘shish
                     </button>
 
